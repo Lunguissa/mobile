@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mesas" >
+
+    <EditText
+        android:id="@+id/etNomeMesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="72dp"
+        android:text="Nome da Mesa" />
+
+    <TextView
+        android:id="@+id/etTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etNomeMesa"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginLeft="66dp"
+        android:text="Criar Mesas"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvProvincia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="34dp"
+        android:text="Provincia" />
+
+    <Spinner
+        android:id="@+id/spProvincia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etNomeMesa"
+        android:layout_alignTop="@+id/tvProvincia" />
+
+    <Spinner
+        android:id="@+id/spDistrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spProvincia"
+        android:layout_alignTop="@+id/tvDistrido" />
+
+    <Spinner
+        android:id="@+id/spLocalidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spDistrito"
+        android:layout_alignTop="@+id/tvLocalidade" />
+
+    <Button
+        android:id="@+id/btListar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btAdicionar"
+        android:layout_alignBottom="@+id/btAdicionar"
+        android:layout_alignLeft="@+id/spLocalidade"
+        android:layout_marginLeft="44dp"
+        android:text="Listar" />
+
+    <TextView
+        android:id="@+id/tvDistrido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvProvincia"
+        android:layout_below="@+id/spProvincia"
+        android:text="Distrito" />
+
+    <TextView
+        android:id="@+id/tvLocalidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvDistrido"
+        android:layout_below="@+id/spDistrito"
+        android:text="Localidade" />
+
+    <Button
+        android:id="@+id/btAdicionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spLocalidade"
+        android:layout_toLeftOf="@+id/etNomeMesa"
+        android:text="Adiconar" />
+
+</RelativeLayout>
