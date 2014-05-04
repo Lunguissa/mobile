@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Gestão de Clientes</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="name_label">Nome:</string>
+    <string name="celNum_label">Nr.Celular:</string>
+    <string name="hairTreatment_label">Tratamento</string>
+    <string name="tratamento">Tratamento:</string>
+    <string name="hora_label">Hora:</string>
+    <string name="marcar_label">Marcar</string>
+    <string name="listar_label">Listar</string>
+     <string name="listas_de_clientes">Listas de Clientes</string>
+    <string name="nome">"Nome    "</string>
+    <string name="lista_tratamento">"      Tratamento"</string>
+    <string name="_nr_celular">"    Nr. Celular"</string>
+    <string name="_hora">"     Hora"</string>
+    <string name="backLabel">Voltar</string>
+
+</resources>

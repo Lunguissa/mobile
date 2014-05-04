@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CreateClient" >
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/NumLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameLabel"
+        android:layout_below="@+id/nameField"
+        android:layout_marginTop="29dp"
+        android:text="@string/celNum_label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/NumField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/NumLabel"
+        android:layout_toRightOf="@+id/NumLabel"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/CareLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/NumLabel"
+        android:layout_below="@+id/NumField"
+        android:layout_marginTop="26dp"
+        android:text="@string/tratamento"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/CareSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/NumField"
+        android:layout_alignTop="@+id/CareLabel"
+        android:layout_toRightOf="@+id/CareLabel" />
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CareLabel"
+        android:layout_below="@+id/CareSpinner"
+        android:layout_marginTop="58dp"
+        android:text="@string/hora_label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CareSpinner"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/timeLabel" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/timeLabel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/CareLabel"
+        android:layout_marginBottom="20dp"
+        android:text="@string/marcar_label" />
+
+    <Button
+        android:id="@+id/listButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/addButton"
+        android:layout_alignBottom="@+id/addButton"
+        android:layout_alignLeft="@+id/CareSpinner"
+        android:layout_alignRight="@+id/timePicker"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/listar_label" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/NumLabel"
+        android:layout_toLeftOf="@+id/nameField"
+        android:text="@string/name_label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
