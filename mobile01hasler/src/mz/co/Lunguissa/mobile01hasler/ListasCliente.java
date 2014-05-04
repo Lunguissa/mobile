@@ -32,11 +32,14 @@ public class ListasCliente extends Activity
 		TableLayout tabela= (TableLayout) findViewById(R.id.tabela);
 		TableRow heading=(TableRow)findViewById(R.id.tableRow1);
 		Button btVoltar=(Button)findViewById(R.id.btVoltar);
-		
+		final ArrayList<Cliente> clientes=new ArrayList<Cliente>();
 		Intent intent=getIntent();
-		
-		final ArrayList<Cliente> clientes=(ArrayList<Cliente>) intent.getSerializableExtra("mesa");
-		
+		ArrayList<Cliente> load= new ArrayList<Cliente>();
+	   	if (intent.getExtras()!=null)
+	   	{
+	   		load=(ArrayList<Cliente>) intent.getSerializableExtra("mesa");
+	   	}
+	    clientes.addAll(load);
 		heading.setBackgroundColor(Color.RED);
 		
 		for (int i = 0; i < clientes.size(); i++) 
