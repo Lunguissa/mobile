@@ -18,6 +18,7 @@ import com.mz.teamLunguissa.model.MesaVoto;
 
 public class ListasMesa extends Activity {
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -28,7 +29,7 @@ public class ListasMesa extends Activity {
 		Button btVoltar=(Button)findViewById(R.id.bt_voltar);
 		Intent intent=getIntent();
 
-		ArrayList<MesaVoto> mesa=(ArrayList<MesaVoto>) intent.getSerializableExtra("mesa");
+		final ArrayList<MesaVoto> mesa=(ArrayList<MesaVoto>) intent.getSerializableExtra("mesa");
 
 		heading.setBackgroundColor(Color.RED);
 
@@ -70,8 +71,9 @@ public class ListasMesa extends Activity {
 			@Override
 			public void onClick(View view)
 			{
-				Intent troca=new Intent(getApplicationContext(),Mesas.class);
-		        startActivity(troca);
+				Intent intent = new Intent(getApplicationContext(),Mesas.class);
+				intent.putExtra("mesa", mesa);
+		        startActivity(intent);
 				
 			}
 		});

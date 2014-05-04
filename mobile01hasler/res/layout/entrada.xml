@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome       " />
+
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvApelito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apelito      " />
+
+        <EditText
+            android:id="@+id/etApelito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvTelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone" />
+
+        <EditText
+            android:id="@+id/etTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvEnderenco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enderenco   " />
+
+        <EditText
+            android:id="@+id/etEnderenco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvRegisto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esta Registrado" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/rbSim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Sim" />
+
+            <RadioButton
+                android:id="@+id/rbNao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nao" />
+        </RadioGroup>
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/tvServicos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Servicos que deseja:" />
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <CheckBox
+            android:id="@+id/cbCortar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="corte de cabelo" />
+
+        <CheckBox
+            android:id="@+id/cbDesflizagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="desflizagem" />
+
+    </TableRow>
+
+    <CheckBox
+        android:id="@+id/cbLavagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" lavagem de cabeça" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/btAddicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="16dp"
+            android:text="Addiconar a listar" />
+
+        <Button
+            android:id="@+id/btListar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/button1"
+            android:text="Listar" />
+    </RelativeLayout>
+
+</LinearLayout>

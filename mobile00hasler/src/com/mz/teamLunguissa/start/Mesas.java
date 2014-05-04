@@ -29,7 +29,6 @@ public class Mesas extends Activity
     	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mesas);
-
         
     	 final EditText etNomeMesa=(EditText) findViewById(R.id.etNomeMesa);
     	 final Spinner spProvincia=(Spinner)findViewById(R.id.spProvincia);
@@ -37,9 +36,17 @@ public class Mesas extends Activity
     	 final Spinner spLocalidade=(Spinner)findViewById(R.id.spLocalidade);
     	 Button btAddiconar=(Button)findViewById(R.id.btAdicionar);
     	 Button btListar=(Button)findViewById(R.id.btListar);
-    	  final ArrayList<MesaVoto> mesa= new ArrayList<MesaVoto>();
-
-
+    	 final ArrayList<MesaVoto> mesa= new ArrayList<MesaVoto>();
+    	 
+    	 //loading
+    	 ArrayList<MesaVoto> load= new ArrayList<MesaVoto>();
+    	 Intent intent=getIntent();
+    	 
+    	if (intent.getExtras()!=null)
+		{
+    		load=(ArrayList<MesaVoto>) intent.getSerializableExtra("mesa");
+		}
+    	  mesa.addAll(load);
          
     	 ArrayList<String> listaPro=Accao.addProvincia();
     	 ArrayList<String> listaDir=Accao.addDistrito();
@@ -52,12 +59,10 @@ public class Mesas extends Activity
         ArrayAdapter<String> LocAdapter = new ArrayAdapter<String>(this,
         		android.R.layout.simple_spinner_item, listaLoc);
         
-
         spProvincia.setAdapter(ProAdapter);
         spDistrito.setAdapter(DirAdapter);
         spLocalidade.setAdapter(LocAdapter);
         
-
         btAddiconar.setOnClickListener(new OnClickListener() 
         {		
 			@Override
@@ -106,7 +111,6 @@ public class Mesas extends Activity
 		});
         
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
